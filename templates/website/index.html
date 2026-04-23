@@ -1,0 +1,45 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Home | Django Project{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <p class="eyebrow">Learning Django</p>
+        <h1>Build clean pages with templates, views, and static files.</h1>
+        <p class="hero-text">
+            This home page is rendered from a Django view and styled with a static CSS file.
+            Use it as a simple starting point for practicing frontend pages in Django.
+        </p>
+        <div class="hero-actions">
+            <a class="button primary" href="{% url 'about' %}">About the Project</a>
+            <a class="button secondary" href="{% url 'contact' %}">Contact</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-heading">
+        <p class="eyebrow">What this page shows</p>
+        <h2>A simple Django frontend flow</h2>
+    </div>
+
+    <div class="feature-grid">
+        <article class="feature-card">
+            <span class="feature-number">01</span>
+            <h3>Views</h3>
+            <p>Each URL calls a view function that renders the correct HTML template.</p>
+        </article>
+        <article class="feature-card">
+            <span class="feature-number">02</span>
+            <h3>Templates</h3>
+            <p>The pages share one base layout, so the navbar and footer stay consistent.</p>
+        </article>
+        <article class="feature-card">
+            <span class="feature-number">03</span>
+            <h3>Static CSS</h3>
+            <p>The design lives in one CSS file loaded with Django's static template tag.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'website/base.html' %}
+
+{% block title %}Contact | Django Project{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <p class="eyebrow">Contact</p>
+    <h1>Have a question or want to connect?</h1>
+    <p>
+        This is a frontend-only contact page. Later, you can connect the form to a
+        Django view and process the submitted data.
+    </p>
+</section>
+
+<section class="section contact-layout">
+    <div class="contact-info">
+        <p class="eyebrow">Details</p>
+        <h2>Start with a simple form</h2>
+        <p>
+            Forms are a great next step after learning views and templates. This
+            version uses plain HTML so you can focus on the page first.
+        </p>
+
+        <div class="contact-list">
+            <p><strong>Email:</strong> hello@example.com</p>
+            <p><strong>Location:</strong> India</p>
+            <p><strong>Response:</strong> Usually within 24 hours</p>
+        </div>
+    </div>
+
+    <form class="contact-form" action="#" method="post">
+        {% csrf_token %}
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message"></textarea>
+
+        <button class="button primary" type="submit">Send Message</button>
+    </form>
+</section>
+{% endblock %}
