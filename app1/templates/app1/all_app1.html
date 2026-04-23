@@ -1,0 +1,24 @@
+{% extends 'website/base.html' %}
+
+{% block title %}App1 | Django Project{% endblock %}
+
+{% block content %}
+<section class="page-hero compact">
+    <p class="eyebrow">App1</p>
+    <h1>Welcome to App1</h1>
+    <p>
+        This page is rendered from the App1 view and uses the shared
+        <strong>base.html</strong> template for the header, footer, and CSS.
+    </p>
+</section>
+
+<section class="section">
+    <div class="content-panel">
+        <h2>Template inheritance is working</h2>
+        <p>
+            The full HTML structure now comes from <strong>website/base.html</strong>.
+            This file only fills in the page title and content blocks.
+        </p>
+    </div>
+</section>
+{% endblock %}
